@@ -58,6 +58,24 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 ```
 
+## Auth Hash Example
+
+The auth hash `request.env['omniauth.auth']` would look like this:
+
+```js
+{
+    "provider": "tanita",
+    "uid": null, // uid will be empty, because there is no apis to get.
+    "credentials": {
+        "token": "ACCESS_TOKEN",
+        "refresh_token": "REFRESH_TOKEN",
+        "expires_at": 1581419031,
+        "expires": true
+    },
+    "extra": {}
+}
+```
+
 ## Contributing
 
 Bug reports and pull requests are welcome on [GitHub](https://github.com/koshilife/omniauth-tanita). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
