@@ -43,6 +43,14 @@ describe OmniAuth::Strategies::Tanita do
       expect(subject.client.options[:token_url]).to eq(Tanita::Api::Client::TOKEN_URL_PATH)
     end
 
+    it 'has default skip_info' do
+      expect(subject.options[:skip_info]).to eq(true)
+    end
+
+    it 'has default provider_ignores_state' do
+      expect(subject.options[:provider_ignores_state]).to eq(true)
+    end
+
     describe 'overrides' do
       context 'as strings' do
         it 'should allow overriding the site' do

@@ -11,6 +11,7 @@ module OmniAuth
       option :name, 'tanita'
 
       option :skip_info, true
+      option :provider_ignores_state, true
 
       option :client_options, :site => TANITA::BASE_URL,
                :authorize_url => TANITA::AUTH_URL_PATH,
