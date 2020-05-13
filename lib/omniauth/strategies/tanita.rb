@@ -12,17 +12,16 @@ module OmniAuth
 
       option :skip_info, true
       option :provider_ignores_state, true
+      option :scope, TANITA::Scope::INNERSCAN
 
       option :client_options, :site => TANITA::BASE_URL,
                :authorize_url => TANITA::AUTH_URL_PATH,
                :token_url => TANITA::TOKEN_URL_PATH
 
-      option :authorize_options, %i[client_id redirect_uri scope response_type]
-      option :response_type, 'code'
-      option :scope, TANITA::Scope::INNERSCAN
+      def callback_url
+        full_host + script_name + callback_path
+     end
 
-      option :token_options, %i[client_id client_secret redirect_uri grant_type]
-      option :grant_type, 'authorization_code'
     end
   end
 end

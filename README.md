@@ -4,13 +4,11 @@
 
 This gem contains the Tanita Health Planet strategy for OmniAuth.
 
-
 ## Before You Begin
 
 You should have already installed OmniAuth into your app; if not, read the [OmniAuth README](https://github.com/intridea/omniauth) to get started.
 
 Now sign into the [Health Planet API Settings page](https://www.healthplanet.jp/apis_account.do) and create an application. Take note of your API keys.
-
 
 ## Using This Strategy
 
@@ -33,8 +31,8 @@ Rails.application.config.middleware.use OmniAuth::Builder do
   provider :tanita, "API_KEY", "API_SECRET"
 end
 ```
-Replace `"API_KEY"` and `"API_SECRET"` with the appropriate values you obtained [earlier](https://www.healthplanet.jp/apis_account.do).
 
+Replace `"API_KEY"` and `"API_SECRET"` with the appropriate values you obtained [earlier](https://www.healthplanet.jp/apis_account.do).
 
 ## Scopes
 
