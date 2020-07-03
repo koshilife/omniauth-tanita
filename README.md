@@ -1,6 +1,9 @@
 # OmniAuth::Tanita
 
+[![Test](https://github.com/koshilife/omniauth-tanita/workflows/Test/badge.svg)](https://github.com/koshilife/omniauth-tanita/actions?query=workflow%3ATest)
+[![codecov](https://codecov.io/gh/koshilife/omniauth-tanita/branch/master/graph/badge.svg)](https://codecov.io/gh/koshilife/omniauth-tanita)
 [![Gem Version](https://badge.fury.io/rb/omniauth-tanita.svg)](http://badge.fury.io/rb/omniauth-tanita)
+[![license](https://img.shields.io/github/license/koshilife/omniauth-tanita)](https://github.com/koshilife/omniauth-tanita/blob/master/LICENSE.txt)
 
 This gem contains the Tanita Health Planet strategy for OmniAuth.
 
