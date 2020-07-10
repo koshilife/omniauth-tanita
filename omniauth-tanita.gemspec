@@ -4,7 +4,7 @@ require_relative 'lib/omniauth-tanita/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'omniauth-tanita'
-  spec.version       = Omniauth::Tanita::VERSION
+  spec.version       = OmniAuth::Tanita::VERSION
   spec.authors       = ['Kenji Koshikawa']
   spec.email         = ['koshikawa2009@gmail.com']
 
