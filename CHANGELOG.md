@@ -1,3 +1,9 @@
+# 0.3.0
+
+- remove 'tanita-api-client' dependency.
+- rename module 'Omniauth' to 'OmniAuth'.
+- update gem-push GitHub Actions settings in order to ignore error for same version.
+
 # 0.2.3
 
 - refs #1 setup GitHub Actions for rspec and pushing to RubyGems.

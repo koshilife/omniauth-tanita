@@ -9,15 +9,15 @@ describe OmniAuth::Strategies::Tanita do
 
   context 'client options' do
     it 'has correct site' do
-      expect(subject.client.site).to eq(Tanita::Api::Client::BASE_URL)
+      expect(subject.client.site).to eq('https://www.healthplanet.jp')
     end
 
     it 'has correct authorize_url' do
-      expect(subject.client.options[:authorize_url]).to eq(Tanita::Api::Client::AUTH_URL_PATH)
+      expect(subject.client.options[:authorize_url]).to eq('/oauth/auth')
     end
 
     it 'has correct token_url' do
-      expect(subject.client.options[:token_url]).to eq(Tanita::Api::Client::TOKEN_URL_PATH)
+      expect(subject.client.options[:token_url]).to eq('/oauth/token')
     end
 
     it 'has default skip_info' do
@@ -27,13 +27,17 @@ describe OmniAuth::Strategies::Tanita do
     it 'has default provider_ignores_state' do
       expect(subject.options[:provider_ignores_state]).to eq(true)
     end
+
+    it 'has default scope' do
+      expect(subject.options[:scope]).to eq('innerscan')
+    end
   end
 
   describe '#callback_url' do
     it 'returns callback url' do
       allow(subject).to receive(:full_host) { 'http://localhost' }
       allow(subject).to receive(:script_name) { '/v1' }
-      expect(subject.callback_url).to eq 'http://localhost/v1/auth/tanita/callback'
+      expect(subject.send(:callback_url)).to eq 'http://localhost/v1/auth/tanita/callback'
     end
   end
 end
