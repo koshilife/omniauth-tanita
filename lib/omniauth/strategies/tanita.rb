@@ -1,27 +1,25 @@
 # frozen_string_literal: true
 
 require 'omniauth-oauth2'
-require 'tanita/api/client'
 
 module OmniAuth
   module Strategies
-    TANITA = Tanita::Api::Client
-
+    # OmniAuth strategy for Health Planet
     class Tanita < OmniAuth::Strategies::OAuth2
       option :name, 'tanita'
 
       option :skip_info, true
       option :provider_ignores_state, true
-      option :scope, TANITA::Scope::INNERSCAN
+      option :scope, 'innerscan'
 
-      option :client_options, :site => TANITA::BASE_URL,
-               :authorize_url => TANITA::AUTH_URL_PATH,
-               :token_url => TANITA::TOKEN_URL_PATH
+      option :client_options, :site => 'https://www.healthplanet.jp',
+               :authorize_url => '/oauth/auth'
+
+    private
 
       def callback_url
         full_host + script_name + callback_path
-     end
-
+      end
     end
   end
 end
