@@ -45,16 +45,12 @@ If you use other scope, you can specify like so:
 ```ruby
 
 Rails.application.config.middleware.use OmniAuth::Builder do
-  TanitaScope = Tanita::Api::Client::Scope
 
   # Sphygmomanometer
-  provider :tanita, "API_KEY", "API_SECRET", :scope => TanitaScope::SPHYGMOMANOMETER
+  provider :tanita, "API_KEY", "API_SECRET", :scope => 'sphygmomanometer'
 
   # Pedometer and Smug
-  provider :tanita, "API_KEY", "API_SECRET", :scope => [TanitaScope::PEDOMETER, TanitaScope::SMUG].join(',')
-
-  # All scopes
-  provider :tanita, "API_KEY", "API_SECRET", :scope => TanitaScope.all.join(',')
+  provider :tanita, "API_KEY", "API_SECRET", :scope => ['pedometer', 'smug'].join(',')
 
 end
 ```
