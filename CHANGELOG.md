@@ -1,3 +1,7 @@
+# 0.4.0
+
+- refs #7 fix dependencies.
+
 # 0.3.0
 
 - remove 'tanita-api-client' dependency.
