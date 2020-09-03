@@ -12,8 +12,8 @@ module OmniAuth
       option :provider_ignores_state, true
       option :scope, 'innerscan'
 
-      option :client_options, :site => 'https://www.healthplanet.jp',
-               :authorize_url => '/oauth/auth'
+      option :client_options, site: 'https://www.healthplanet.jp',
+               authorize_url: '/oauth/auth'
 
     private
 
