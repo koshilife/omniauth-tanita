@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.5.0
+
+- followed dependency library changes for omniauth (v2.x).
+- set required_ruby_version to 2.5.
+
 ## 0.4.1
 
 - fix rubocop warnings.

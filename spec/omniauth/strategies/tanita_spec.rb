@@ -32,12 +32,4 @@ describe OmniAuth::Strategies::Tanita do
       expect(subject.options[:scope]).to eq('innerscan')
     end
   end
-
-  describe '#callback_url' do
-    it 'returns callback url' do
-      allow(subject).to receive(:full_host) { 'http://localhost' }
-      allow(subject).to receive(:script_name) { '/v1' }
-      expect(subject.send(:callback_url)).to eq 'http://localhost/v1/auth/tanita/callback'
-    end
-  end
 end
