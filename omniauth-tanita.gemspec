@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description   = spec.description
   spec.homepage      = 'https://github.com/koshilife/omniauth-tanita'
   spec.license       = 'MIT'
-  spec.required_ruby_version = Gem::Requirement.new('>= 2.5')
+  spec.required_ruby_version = Gem::Requirement.new('>= 2.4')
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/koshilife/omniauth-tanita'
@@ -28,7 +28,8 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
   spec.require_paths = ['lib']
 
-  spec.add_runtime_dependency 'omniauth-oauth2', '>= 1.7.1'
+  spec.add_runtime_dependency 'omniauth', '~> 1.9.1'
+  spec.add_runtime_dependency 'omniauth-oauth2', '~> 1.6.0'
 
   spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'codecov'
