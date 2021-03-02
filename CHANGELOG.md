@@ -1,9 +1,8 @@
 # CHANGELOG
 
-## 0.5.0
+## 0.5.1
 
-- followed dependency library changes for omniauth (v2.x).
-- set required_ruby_version to 2.5.
+- specified omniauth v1.9 dependency.
 
 ## 0.4.1
 
